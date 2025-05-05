@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critter & Flora ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/leaf.png') }}" type="image/png">
+    <!-- Add Font Awesome for eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-clip">
+        <source src="{{ url_for('static', filename='assets/Background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h2>Create Account</h2>
+        
+        {# Display Flashed Messages #}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if registration_success %}
+            <div class="alert-success-transparent">
+                <h3>Registration Successful!</h3>
+                <p>Your account has been created successfully.</p>
+                <p>We've sent a welcome email to your registered email address. 📧(CHECK SPAM ⚠️)</p>
+                <a href="{{ url_for('login') }}" class="success-button">Back to Login</a>
+            </div>
+        {% else %}
+            {# Show the registration form #}
+            <form action="{{ url_for('register') }}" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group password-group">
+                    <input type="password" name="password" id="password" placeholder="Password" required oninput="validatePassword()">
+                    <span class="password-toggle" onclick="togglePassword('password')">
+                        <i class="fa-solid fa-eye" id="toggleIcon1"></i>
+                    </span>
+                </div>
+            
+                <div class="password-criteria" id="password-criteria">
+                    <div class="criteria-item" id="length-criteria">
+                        <span class="criteria-icon"></span>
+                        <span>8 characters minimum</span>
+                    </div>
+                    <div class="criteria-item" id="lowercase-criteria">
+                        <span class="criteria-icon"></span>
+                        <span>One lowercase character</span>
+                    </div>
+                    <div class="criteria-item" id="uppercase-criteria">
+                        <span class="criteria-icon"></span>
+                        <span>One uppercase character</span>
+                    </div>
+                    <div class="criteria-item" id="number-criteria">
+                        <span class="criteria-icon"></span>
+                        <span>One number</span>
+                    </div>
+                    <div class="criteria-item" id="special-criteria">
+                        <span class="criteria-icon"></span>
+                        <span>One special character</span>
+                    </div>
+                </div>
+                
+                <div class="input-group password-group">
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                    <span class="password-toggle" onclick="togglePassword('confirm_password')">
+                        <i class="fa-solid fa-eye" id="toggleIcon2"></i>
+                    </span>
+                </div>
+
+                <!-- Password match indicator -->
+                <div class="password-match" id="password-match" style="display: none;"></div>
+                
+                <button type="submit" id="submit-btn">Sign Up</button>
+                <div class="links">
+                    <span>Already have an account? <a href="{{ url_for('login') }}">Login</a></span>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+    <footer style="text-align: center; color:white; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        Developed by 
+        <a href="https://github.com/Lokesh071" target="_blank" style="text-decoration: none; color: #fffbfb; text-shadow: white 2px;">
+          <i class="fab fa-github" style="margin-right: 5px;"></i>Lokesh071
+        </a>
+      </footer>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/leaf.png') }}" type="image/png">
+    <title>Critter & Flora ID</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Page2.css') }}">
+</head>
+<body>
+    <h1>
+        <span class="critter">Critter</span> 
+        <span class="comb">&</span> 
+        <span class="flora">Flora</span> ID:
+        <span class="subtitle">meet your curiosity with nature</span>
+    </h1>
+    
+    <video autoplay loop muted playsinline class="background-clip">
+        <source src="{{ url_for('static', filename='assets/Background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="container">
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='birds') }}'">Birds 🕊️</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='plants') }}'">Plants 🍁</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='insects') }}'">Insects 🐞</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='dogs') }}'">Dogs 🐶</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='cats') }}'">Cats 🐱</button>
+        <button type="button" onclick="window.location.href='{{ url_for('index', category='flowers') }}'">Flowers 🌸</button>
+    </div>
+    <footer style="text-align: center; color:white; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        Developed by 
+        <a href="https://github.com/Lokesh071" target="_blank" style="text-decoration: none; color: #fffbfb; text-shadow: white 2px;">
+          <i class="fab fa-github" style="margin-right: 5px;"></i>Lokesh071
+        </a>
+      </footer>
+    <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+</body>
+</html>

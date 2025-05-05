@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critter & Flora ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/leaf.png') }}" type="image/png">
+</head>
+<body>
+    <video autoplay loop muted playsinline class="background-clip">
+        <source src="{{ url_for('static', filename='assets/Background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h2>Reset Password</h2>
+        <p class="instruction">Enter your email address or username. If found in our system, a temporary password will be sent to your registered email.</p>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('forgot_password') }}" method="POST">
+            <div class="input-group">
+                <input type="text" name="login_id" placeholder="Username/Email" required>
+            </div>
+            <button type="submit">Reset Password</button>
+            <div class="links">
+                <a href="{{ url_for('login') }}">Back to Login</a>
+            </div>
+        </form>
+    </div>
+    <footer style="text-align: center; color:white; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+        Developed by 
+        <a href="https://github.com/Lokesh071" target="_blank" style="text-decoration: none; color: #fffbfb; text-shadow: white 2px;">
+          <i class="fab fa-github" style="margin-right: 5px;"></i>Lokesh071
+        </a>
+      </footer>
+    <script src="{{ url_for('static', filename='js/login1.js') }}"></script>
+</body>
+</html>
