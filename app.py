@@ -51,9 +51,9 @@ app.permanent_session_lifetime = timedelta(days=1)
 # Email configuration
 EMAIL_SERVER = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
 EMAIL_PORT = int(os.getenv('MAIL_PORT', 587))
-EMAIL_USERNAME = os.getenv('MAIL_USERNAME', 'your-email@gmail.com')
-EMAIL_PASSWORD = os.getenv('MAIL_PASSWORD', 'your-password')
-EMAIL_SENDER = os.getenv('MAIL_DEFAULT_SENDER', 'your-email@gmail.com')
+EMAIL_USERNAME = os.getenv('MAIL_USERNAME', 'your-email@gmail.com') #Enter your mail id
+EMAIL_PASSWORD = os.getenv('MAIL_PASSWORD', 'your-password') #keep app password server
+EMAIL_SENDER = os.getenv('MAIL_DEFAULT_SENDER', 'your-email@gmail.com') #Enter your mail id
 EMAIL_USE_TLS = os.getenv('MAIL_USE_TLS', 'True') == 'True'
 
 # Print mail configuration (without showing full password)
