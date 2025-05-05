@@ -13,6 +13,4 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert user
-INSERT INTO users (email, password) VALUES ('loke@gmail.com', 'pass11');
 
