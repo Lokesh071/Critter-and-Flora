@@ -105,3 +105,37 @@ This project is licensed under the MIT License.
 
 - Species data sourced from reputable databases
 - The TensorFlow and machine learning communities for providing tools and resources for image recognition
+
+  OUTPUT SCREENS:
+  ![Screenshot 2025-05-05 144117](https://github.com/user-attachments/assets/90bc5e0b-dc31-4c5e-abce-68d1651d195e)
+  ![image](https://github.com/user-attachments/assets/365e928f-379e-4396-a6db-4c87266cf9a8)
+  ![image](https://github.com/user-attachments/assets/419aced1-b392-484c-b349-82b2c0e7eee7)
+  ![image](https://github.com/user-attachments/assets/b9810b99-c131-4aac-b1fa-20fb31a95bba)
+  ![image](https://github.com/user-attachments/assets/6e945866-2d12-402c-9123-b720a34e92e1)
+  ![image](https://github.com/user-attachments/assets/e631d2e9-b262-4054-8dde-708942adfe1d)
+  ![image](https://github.com/user-attachments/assets/3f053212-3ca8-411a-a3b1-dc10cbedcdb1)
+  ![image](https://github.com/user-attachments/assets/d8063b63-b7b8-4d49-a935-f48963a56bc3)
+  ![image](https://github.com/user-attachments/assets/7037cf05-dddd-47c4-a643-fc5c199bc704)
+  ![image](https://github.com/user-attachments/assets/068fa5b8-2787-4c71-9359-c868b979d73a)
+  ![image](https://github.com/user-attachments/assets/b81fb5fd-a406-401e-b19c-11ead4bbd779)
+  ![image](https://github.com/user-attachments/assets/854385c8-3812-4e13-ab96-022cbf542dda)
+  ![image](https://github.com/user-attachments/assets/44794ed3-c4bf-46da-b3b5-79fb753e8263)
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
