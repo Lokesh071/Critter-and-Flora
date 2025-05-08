@@ -1,4 +1,4 @@
--- Active: 1744095484900@@127.0.0.1@3307@nature_auth
+
 -- Create the database
 CREATE DATABASE IF NOT EXISTS nature_auth;
 
