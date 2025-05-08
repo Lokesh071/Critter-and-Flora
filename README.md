@@ -106,7 +106,7 @@ This project is licensed under the MIT License.
 - Species data sourced from reputable databases
 - The TensorFlow and machine learning communities for providing tools and resources for image recognition
 
-  OUTPUT SCREENS:
+## OUTPUT SCREENS:
   ![Screenshot 2025-05-05 144117](https://github.com/user-attachments/assets/90bc5e0b-dc31-4c5e-abce-68d1651d195e)
   
   ![image](https://github.com/user-attachments/assets/365e928f-379e-4396-a6db-4c87266cf9a8)
