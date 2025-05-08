@@ -10,7 +10,7 @@ if %errorlevel% neq 0 (
 
 REM Reset the password in the database
 echo Running password reset script...
-mysql -u root -p"pass11" -P 3307 < reset_password.sql
+mysql -u root -p"yourpassword" -P 3307 < reset_password.sql
 
 REM Check if the MySQL command was successful
 if %errorlevel% neq 0 (
